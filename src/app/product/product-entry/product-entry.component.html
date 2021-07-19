@@ -1,0 +1,43 @@
+
+<form action="" (ngSubmit)="save()" #myform=ngForm>
+    <div>
+        <label for="">Product_ID</label>
+    </div>
+    <div>
+        <input type="text" name="pid" value="" class="form-control"
+         minlength="1" required [(ngModel)]="model.pid" #pid="ngModel" id="">
+    </div>
+
+    <div>
+        <label for="">Product_Name</label>
+    </div>
+    <div>
+        <input type="text" name="pname" value="" class="form-control"
+        minlength="1" required [(ngModel)]="model.pname" #pname="ngModel" id="">
+    </div>
+
+    <div>
+        <label for="">Product_Price</label>
+    </div>
+    <div>
+        <input type="number" name="pprice" value="" class="form-control"
+        minlength="1" required [(ngModel)]="model.pprice" #pprice="ngModel" id="">
+    </div>
+
+    <div>
+        <label for="">Product_Description</label>
+    </div>
+    <div>
+        <input type="text" name="pdes" value="" class="form-control"
+        minlength="1" required [(ngModel)]="model.pdes" #pdes="ngModel" id="">
+    </div>
+    <div>
+        <label for="">Product_Quantity</label>
+    </div>
+    <div>
+        <input type="text" name="pqty" value="" class="form-control"
+        minlength="1" required [(ngModel)]="model.pqty" #pqty="ngModel" id="">
+        </div>
+
+    <input type="submit" value="login">
+</form>

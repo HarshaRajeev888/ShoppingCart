@@ -1,0 +1,42 @@
+[
+    {
+        "product_id": "1",
+        "product_name": "Laptop",
+        "product_price": "200000",
+        "product_description": "Apple MacBook Pro with Apple M1 Chip Model (13-inch, 8GB RAM, 512GB SSD) - Silver ",
+         "product_quantity":0,
+        "img": "../../assets/images/laptop.jpg"
+    },
+    {
+        "product_id": "2",
+        "product_name": "Mobile",
+        "product_price": "45000",
+        "product_description": "Vivo V15 Pro (Topaz Blue, 8GB RAM, 128GB Storage) ",
+        "product_quantity":0,
+        "img": "../../assets/images/mobile1.jpg"
+    },
+    {
+        "product_id": "3",
+        "product_name": "Airpod",
+        "product_price": "15000",
+        "product_description": "Apple AirPods with Wireless Charging Case ",
+        "product_quantity":0,
+        "img": "../../assets/images/airpod.jpg"
+    },
+    {
+        "product_id": "4",
+        "product_name": "Apple Watch",
+        "product_price": "30000",
+        "product_description": "Apple Watch Series 6 GPS - 40 mm Gold Aluminium Case with Pink Sand Sport Band",
+        "product_quantity":0,
+        "img": "../../assets/images/watch.jpg"
+    },
+    {
+        "product_id": "5",
+        "product_name": "Tablet",
+        "product_price": "25000",
+        "product_description": "Samsung Galaxy Tab S6 Lite (LTE) 26.31 cm (10.4 inch) Tablet 4 GB RAM, 64 GB, Blue",
+        "product_quantity":0,
+        "img": "../../assets/images/tab.jpg"
+    }
+]

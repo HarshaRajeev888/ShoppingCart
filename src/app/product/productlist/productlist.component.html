@@ -1,0 +1,47 @@
+
+
+
+<html>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color:navajowhite;
+        padding: auto;
+    }
+</style>
+
+<body>
+    <table style="width:80%; height: 400px;">
+        <tr>
+            <th>Product_ID</th>
+            <th>Product_Name</th>
+            <th>Product_Price</th>
+            <th>Product_Description</th>
+            <th>Product_Image</th>
+            <th>Product_Quantity</th>
+        </tr>
+
+        <tr *ngFor="let array of productlist">
+            <td>{{array.product_id}}</td>
+            <td>{{array.product_name}}</td>
+            <td>{{array.product_price}}</td>
+            <td>{{array.product_description}}</td>
+            <td><img [src]="array.img" height="80px" width="80px"></td>
+
+            <td class="text-center">
+                <button (click)="minusQuantity(array)">-</button>
+                {{array.product_quantity}}
+                <button (click)="addQuantity(array)">+</button>
+            </td>
+            <td> <button (click)="addToCart(array)">Add to Cart</button>
+            </td>
+         </tr>
+ </table>
+</body>
+</html>
+<button class="btn btn-info"  (click)="logout()">logout</button>
+
+  

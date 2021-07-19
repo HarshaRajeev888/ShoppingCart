@@ -1,0 +1,56 @@
+<div *ngIf="items!=''">
+    
+
+<html>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: white;
+        padding: auto;
+    }
+</style>
+
+<body>
+    <table style="width:80%; height: 400px;">
+        <tr>
+            <th>Product_ID</th>
+            <th>Product_Name</th>
+            <th>Product_Price</th>
+            <th>Product_Description</th>
+            <th>Product_Image</th>
+            <th>Product_Quantity</th>
+        </tr>
+
+        <tr *ngFor="let array of items">
+            <td>{{array.product_id}}</td>
+            <td>{{array.product_name}}</td>
+            <td>{{array.product_quantity*array.product_price}}</td>
+            <td>{{array.product_description}}</td>
+            <td><img [src]="array.img" height="80px" width="80px"></td>
+            <td>{{array.product_quantity}}</td>
+               
+         </tr>
+ </table>
+</body>
+</html>
+ <br><br>
+<div *ngIf="totalamount==0">
+    <b>Click here to see your total amount 
+    <button type="button" class="btn btn-info" (click)="calcTotalCost()">click</button></b>
+</div>
+<div *ngIf="totalamount!=0">
+    <b>your total bill amount=={{totalamount}}</b>
+</div> 
+<div *ngIf="items!=''" >
+    <b>if u want to empty your cart
+    <button type="button" class="btn btn-danger" (click)="clear()">Empty Cart <br>  </button></b>
+</div>
+
+<div *ngIf="items==''">
+    <b>item is removed</b>
+</div>
+</div>
+
