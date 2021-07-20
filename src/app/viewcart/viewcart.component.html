@@ -39,10 +39,10 @@
  <br><br>
 <div *ngIf="totalamount==0">
     <b>Click here to see your total amount 
-    <button type="button" class="btn btn-info" (click)="calcTotalCost()">click</button></b>
+    <button type="button" class="btn btn-info" (click)="calcTotalCost()">Total</button></b>
 </div>
 <div *ngIf="totalamount!=0">
-    <b>your total bill amount=={{totalamount}}</b>
+    <b>Total=={{totalamount}}</b>
 </div> 
 <div *ngIf="items!=''" >
     <b>if u want to empty your cart
@@ -52,5 +52,10 @@
 <div *ngIf="items==''">
     <b>item is removed</b>
 </div>
+
+
+
 </div>
+
+<button class="btn btn-info" (click)="logout()">logout </button>
 

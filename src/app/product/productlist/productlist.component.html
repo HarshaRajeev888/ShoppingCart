@@ -8,7 +8,7 @@
     td {
         border: 1px solid black;
         border-collapse: collapse;
-        background-color:navajowhite;
+        background-color:white;
         padding: auto;
     }
 </style>
@@ -27,7 +27,7 @@
         <tr *ngFor="let array of productlist">
             <td>{{array.product_id}}</td>
             <td>{{array.product_name}}</td>
-            <td>{{array.product_price}}</td>
+            <td>{{array.product_price*array.product_quantity}}</td>
             <td>{{array.product_description}}</td>
             <td><img [src]="array.img" height="80px" width="80px"></td>
 
@@ -42,6 +42,6 @@
  </table>
 </body>
 </html>
-<button class="btn btn-info"  (click)="logout()">logout</button>
+
 
   

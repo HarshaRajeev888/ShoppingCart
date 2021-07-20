@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {CartService} from '../cart.service'
 import { ProductService } from '../product.service';
 import {ProductlistComponent} from '../product/productlist/productlist.component'
+import {AuthService} from 'src/app/auth.service'
+import {LogService} from 'src/app/log.service'
+import {Router} from '@angular/router'
+import {Login} from 'src/app/login/login'
 
 
 @Component({
@@ -15,9 +19,21 @@ items=this.cart.getitems()
 
 total:number=0
 totalamount:number=0
-  constructor(private cart:CartService) { }
+loglist:Login[]=[]
+returnURL=""
+array:any
+  constructor(private cart:CartService,private router:Router,private auth:AuthService,private log:LogService) { }
 
   ngOnInit(): void {
+
+    this.log.readData().subscribe(data => {
+         this.loglist = data.map((doc) => {
+          return {
+            id: doc.payload.doc.id,
+            ...doc.payload.doc.data() as {}
+          } as Login
+        })
+      })
   }
 
   clear(){
@@ -36,5 +52,10 @@ totalamount:number=0
 
     return total
   }
+
+  logout(){
+       this.auth.logout()
+       this.router.navigate(["/login"])
+     }
 
 }

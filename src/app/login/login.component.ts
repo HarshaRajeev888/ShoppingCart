@@ -69,7 +69,7 @@ for(let i of this.loglist){
   }
 }
 edit(array:Login){
-  this.log.editData(array)
+  this.logindata=array
 }
 delete(array:Login){
   this.log.deleteData(array)
